@@ -63,8 +63,8 @@ export default function SearchAppBar() {
             <AppBar position="static">
                 <Toolbar>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Material-UI
-            </Typography>
+                        Target 永林
+                    </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
@@ -82,5 +82,5 @@ export default function SearchAppBar() {
             </AppBar>
         </div>
     );
-    
+
 }
