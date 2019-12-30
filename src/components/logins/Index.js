@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
         // backgroundImage: 'url(https://source.unsplash.com/random)',
         // backgroundRepeat: 'no-repeat',
         backgroundColor: "#fc9f2b",
-            // theme.palette.type === 'dark' ? theme.palette.grey[900] : theme.palette.grey[50],
+        // theme.palette.type === 'dark' ? theme.palette.grey[900] : theme.palette.grey[50],
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     },
@@ -48,7 +48,7 @@ export default function SearchAppBar() {
             <Grid item xs={false} sm={4} md={7} className={classes.image} />
             <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                 <div className={classes.div} >
-                    <form className={classes.form} noValidate>
+                    <div className={classes.form}>
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -82,7 +82,7 @@ export default function SearchAppBar() {
                         >
                             登 陆
                     </Button>
-                    </form>
+                    </div>
                 </div >
             </Grid>
         </Grid>
