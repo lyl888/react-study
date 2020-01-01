@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
         alignItems: 'center',
     },
-    form: {
+    formBox: {
         width: '86%', // Fix IE 11 issue.
         marginTop: theme.spacing(1),
     },
@@ -42,13 +42,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function SearchAppBar() {
+    const handleSubmit = (event, newValue) => {
+        console.log(event.target)
+        return false;
+    };
     const classes = useStyles();
     return (
         <Grid container component="main" className={classes.root}>
             <Grid item xs={false} sm={4} md={7} className={classes.image} />
             <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                 <div className={classes.div} >
-                    <form className={classes.form} noValidate>
+                    <div className={classes.formBox}>
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -79,10 +83,11 @@ export default function SearchAppBar() {
                             variant="contained"
                             color="primary"
                             className={classes.submit}
+                            onClick={handleSubmit} 
                         >
                             登 陆
                     </Button>
-                    </form>
+                    </div>
                 </div >
             </Grid>
         </Grid>
